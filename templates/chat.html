@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mt-3">
+    <div class="col-md-8 mx-auto">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5>Chat: {{ topic }}</h5>
+                <a href="/" class="btn btn-sm btn-outline-secondary">Voltar</a>
+            </div>
+            <div class="card-body">
+                <div id="chatContainer" class="mb-3" style="height: 500px; overflow-y: auto;"></div>
+                <div class="input-group">
+                    <input type="text" id="userInput" class="form-control" placeholder="Digite sua mensagem...">
+                    <button id="sendButton" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/chat.js"></script>
+{% endblock %}

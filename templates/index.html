@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+    <div class="col-md-8 text-center">
+        <h1 class="mb-4">AI Judge System</h1>
+        <p class="lead">Converse com uma IA enviesada e veja um juiz de IA avaliar as respostas</p>
+        
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5 class="card-title">Selecione um tópico</h5>
+                <select id="topicSelect" class="form-select mb-3">
+                    <option value="pluto" selected>Plutão é um planeta</option>
+                    {% for topic in topics %}
+                        <option value="{{ topic }}">{{ topic }}</option>
+                    {% endfor %}
+                </select>
+                <button id="startChat" class="btn btn-primary">Iniciar Chat</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="/static/js/index.js"></script>
+{% endblock %}

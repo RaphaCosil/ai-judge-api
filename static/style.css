@@ -1,0 +1,22 @@
+.user-message {
+    background-color: #e3f2fd;
+    text-align: right;
+}
+
+.ai-message {
+    background-color: #f5f5f5;
+    text-align: left;
+}
+
+.evaluation-message {
+    background-color: #fff8e1;
+    border-left: 4px solid #ffc107;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+#chatContainer {
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 10px;
+}
