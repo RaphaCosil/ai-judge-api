@@ -4,6 +4,7 @@ from langchain.agents import initialize_agent, AgentType
 from langchain.tools import Tool
 from langchain.prompts import PromptTemplate
 from app.topic_manager import load_topic_content
+import os
 
 def create_biased_agent(topic_name):
     topic_content = load_topic_content(topic_name)
@@ -11,7 +12,7 @@ def create_biased_agent(topic_name):
         return None
     
     chat = ChatGoogleGenerativeAI(
-        model="gemini-1.5-pro",
+        model="gemini-1.0-pro",
         temperature=0.7,
         google_api_key=os.getenv("GEMINI_API_KEY")
     )

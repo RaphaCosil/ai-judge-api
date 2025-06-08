@@ -4,8 +4,8 @@ import os
 
 def create_judge():
     return ChatGoogleGenerativeAI(
-        model="gemini-1.5-pro",
-        temperature=0.3,
+        model="gemini-1.0-pro",
+        temperature=0.7,
         google_api_key=os.getenv("GEMINI_API_KEY")
     )
 
