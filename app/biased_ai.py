@@ -12,7 +12,7 @@ def create_biased_agent(topic_name):
         return None
     
     chat = ChatGoogleGenerativeAI(
-        model="gemini-1.0-pro",
+        model="gemini-2.0-flash",
         temperature=0.7,
         google_api_key=os.getenv("GEMINI_API_KEY")
     )

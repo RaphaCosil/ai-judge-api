@@ -4,7 +4,7 @@ import os
 
 def create_judge():
     return ChatGoogleGenerativeAI(
-        model="gemini-1.0-pro",
+        model="gemini-2.0-flash",
         temperature=0.7,
         google_api_key=os.getenv("GEMINI_API_KEY")
     )
@@ -21,8 +21,8 @@ def evaluate_response(question, response, topic_name):
     2. Clareza: A resposta é clara e bem estruturada?
     3. Honestidade intelectual: A resposta reconhece quando está apresentando uma visão minoritária?
 
-    Se a resposta for cientificamente correta, diga "✅ CORRETO" e explique por quê.
-    Se a resposta estiver incorreta ou enviesada, diga "⚠️ INCORRETO" e:
+    Se a resposta for cientificamente correta, diga "CORRETO" e explique por quê.
+    Se a resposta estiver incorreta ou enviesada, diga "INCORRETO" e:
     - Explique o erro
     - Forneça a resposta cientificamente correta
     - Avalie o grau de viés (leve, moderado ou severo)
